@@ -2,19 +2,7 @@
 $(document).ready(function () {
     $('.mt-toggle-container nav em:contains("No headers")').closest('.mt-toggle-container').css('display', 'none');
 
-
-$( document ).ajaxStop(function() {
-
-$('ul#mt-search-results li.type-empty p').html('<p>Try searching for something else, or click <a href="#" class="mt-search-reset">here</a> to search the whole site.</p>');
-
-
-});
-$( document ).ajaxStart(function() {
-
-$('ul#mt-search-results li.type-empty p').html('<p>Try searching for something else, or click <a href="#" class="mt-search-reset">here</a> to search the whole site.</p>');
-
-
-});
+            $('.noindex .mt-toggle-collapse').trigger('click');
 
 
     $('ol li.elm-back-to-top a').attr('href', 'javascript:void(0);');
@@ -31,5 +19,8 @@ $('ul#mt-search-results li.type-empty p').html('<p>Try searching for something e
             $('.mt-icon-back-to-top').removeClass('move').addClass('back');
         }
     };
+
+
+
 });
 </script>
