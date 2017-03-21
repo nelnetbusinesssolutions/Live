@@ -1,1 +1,1 @@
-Enter your CSS for the Live Site here.
+Enter your code for the Live Site in the appropriate files.
