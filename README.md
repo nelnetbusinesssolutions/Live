@@ -1,2 +1,1 @@
-# Live
-Live Site Code
+Enter your CSS for the Live Site here.
