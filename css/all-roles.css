@@ -6,7 +6,6 @@
     background-size: cover;
 }
 
-
 .elm-header {
     background: #fff;
 }
@@ -61,7 +60,7 @@ h6 {
 
     .mt-version-indicator span {
         float: left;
-        dipslay: block;
+        display: block;
         margin-right: 20px;
     }
 
@@ -305,4 +304,9 @@ div {
 /* Add feedback to video type articles*/
 .columbia-article-topic-video .mt-feedback-rating-container {
     display: block;
+}
+
+/* Hides attachments for pro-viewers*/
+body.elm-user-pro-member.columbia-group-pro-viewer .elm-attachments {
+    display: none;
 }
