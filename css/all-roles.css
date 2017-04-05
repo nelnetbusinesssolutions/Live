@@ -121,6 +121,68 @@ fieldset#mt-classification-settings {
     text-decoration: none;
 }
 
+/* Icons */
+
+.note-blank {
+    background-image: url(/@api/deki/files/577/NoteIcon.png?origin=mt-web);
+}
+
+.important {
+    background-image: url(/@api/deki/files/583/Notes_Caution_icon.png?origin=mt-web);
+}
+
+.tip {
+    background-image: url(/@api/deki/files/606/Tip_icon.png?origin=mt-web);
+}
+
+.important, .note-blank, .tip{
+    overflow: hidden;
+    border-radius: 6px;
+    padding: 20px 20px 20px 70px;
+    margin: 20px 0;
+    background-repeat: no-repeat;
+    background-position: 20px 20px !important;
+    background-size: 35px;
+    min-height: 30px;
+}
+
+.note-blank {
+    background-color: #FFFFFF;
+    border: 1px solid #8A8C8E;
+}
+
+.important {
+    background-color: #F9F9F9;
+    filter: alpha(opacity=60);
+    border: 1px solid #8DCE19;
+}
+
+.tip {
+    background-color: #FFFFFF;
+    border: 1px solid #8A8C8E;
+}
+
+/* Conditionalized text and images */
+.mt-style-conditional {
+    color: #B74E29;
+}
+
+h1.mt-style-conditional, h2.mt-style-conditional, h3.mt-style-conditional, h4.mt-style-conditional, h5.mt-style-conditional, h6.mt-style-conditional, li.mt-style-conditional, p.mt-style-conditional {
+    color: #B74E29;
+}
+
+body.cke_editable hr, hr, .note-blank, .important, .tip {
+    border: 1px solid #B74E29 !important;
+}
+
+img {
+    border: 3px solid #B74E29 !important;
+}
+
+div {
+    display: block;
+}
+
 /*Back to Top button*/
 .mt-icon-back-to-top {
     position: fixed;
@@ -234,57 +296,6 @@ body.elm-user-pro-member.columbia-article-topic-guide.columbia-group-pro-admin l
 
 .no-touch .ui-state-hover a:hover, .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited, .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited, .ui-state-error a, .ui-state-highlight a, .ui-state-hover a, .ui-state-hover a:link, .ui-state-hover a:visited, .ui-widget-content .ui-state-error a, .ui-widget-content .ui-state-highlight a, .ui-widget-content a, .ui-widget-header .ui-state-error a, .ui-widget-header .ui-state-highlight a, .ui-widget-header a {
     color: #3473AC;
-}
-
-.note-blank {
-    background-image: url(/@api/deki/files/577/NoteIcon.png?origin=mt-web);
-}
-
-.important {
-    background-image: url(/@api/deki/files/583/Notes_Caution_icon.png?origin=mt-web);
-}
-
-.important, .note-blank {
-    overflow: hidden;
-    border-radius: 6px;
-    padding: 20px 20px 20px 70px;
-    margin: 20px 0;
-    background-repeat: no-repeat;
-    background-position: 20px 20px !important;
-    background-size: 35px;
-    min-height: 30px;
-}
-
-.note-blank {
-    background-color: #FFFFFF;
-    border: 1px solid #8A8C8E;
-}
-
-.important {
-    background-color: #F9F9F9;
-    filter: alpha(opacity=60);
-    border: 1px solid #8DCE19;
-}
-
-/* Conditionalized text and images */
-.mt-style-conditional {
-    color: #B74E29;
-}
-
-h1.mt-style-conditional, h2.mt-style-conditional, h3.mt-style-conditional, h4.mt-style-conditional, h5.mt-style-conditional, h6.mt-style-conditional, li.mt-style-conditional, p.mt-style-conditional {
-    color: #B74E29;
-}
-
-body.cke_editable hr, hr, .note-blank, .important, .tip {
-    border: 1px solid #B74E29 !important;
-}
-
-img {
-    border: 3px solid #B74E29 !important;
-}
-
-div {
-    display: block;
 }
 
 .elm-header-user-nav a, .elm-header-user-nav a:visited {
