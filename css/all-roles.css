@@ -219,25 +219,21 @@ div {
     }
 
 /*Back to to on every Learning Path*/
-
 .columbia-learning-path .elm-meta-article-navigation .elm-back-to-top, .columbia-article-topic-guide #mt-back-to-top {
     display: block;
 }
 
 /*Hide Search Question Mark*/
-
 .mt-content-container #pageText a.mt-f1-success.mt-f1-link.mt-icon-f1-link.mt-f1-search.link-https {
     display: none;
 }
 
 /*Hide Powered by Mindtouch*/
-
 footer.elm-footer nav.elm-footer-siteinfo-nav.elm-nav ol li.elm-footer-powered-by {
     display: none;
 }
 
 /*Hide Filters based on Account Type*/
-
 body.elm-user-pro-member .mt-field.mt-classification-filter-section.mt-classification-section-owner, body.elm-user-pro-member .mt-field.mt-classification-filter-section.mt-classification-section-stage, body.elm-user-pro-member .mt-field.mt-classification-filter-section.mt-classification-section-article {
     display: none;
 }
