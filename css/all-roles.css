@@ -135,7 +135,7 @@ fieldset#mt-classification-settings {
     background-image: url(/@api/deki/files/606/Tip_icon.png?origin=mt-web);
 }
 
-.important, .note-blank, .tip{
+.important, .note-blank, .tip {
     overflow: hidden;
     border-radius: 6px;
     padding: 20px 20px 20px 70px;
