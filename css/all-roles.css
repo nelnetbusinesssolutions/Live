@@ -258,16 +258,40 @@ body.elm-user-pro-member.columbia-group-pro-admin .mt-field.mt-classification-fi
     transform: rotate(180deg);
 }
 
-/*Hiding Article Type*/
+/* Search Filter Results */
+.mt-help-breadcrumb-container {
+    font-size: 1.15em;
+}
+
+.mt-help-breadcrumb-label {
+    font-weight: normal;
+    margin-right: .3em;
+}
+
+/*Hide Article Type*/
 .mt-guide-tab-settings.mt-toggle-container.mt-guide-tabs-settings-area + h5.mt-classification-heading {
     display: none;
+}
+
+.mt-carousel-helper-text {
+    font-weight: bold;
+}
+
+/*.mt-help-breadcrumb-container.mt-search-breadcrumb-widget .mt-carousel-helper-text {
+    display: block;
+    margin-left: 0;
+    padding-top: 10px;
+} */
+
+/*Help For Text*/
+#mt-search-container #UserSupport h1.mt-help-header {
+    font-size: 2em;
 }
 
 /*Hide Feedback on Search*/
 .mt-help-button-container {
     display: none;
 }
-
 
 /*Hide Topic and Category for Non-Admin*/
 body.elm-user-pro-member.columbia-article-topic-guide li.elm-last-modified, body.elm-user-pro-member.columbia-article-topic-guide li.elm-page-restriction, body.elm-user-pro-member.columbia-article-topic-category li.elm-last-modified, body.elm-user-pro-member.columbia-article-topic-category li.elm-page-restriction, body.columbia-group-school-users.columbia-article-topic-guide li.elm-last-modified, body.columbia-group-school-users.columbia-article-topic-guide li.elm-page-restriction, body.columbia-group-school-users.columbia-article-topic-category li.elm-last-modified, body.columbia-group-school-users.columbia-article-topic-category li.elm-page-restriction {
