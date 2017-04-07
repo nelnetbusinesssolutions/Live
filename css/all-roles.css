@@ -306,6 +306,10 @@ body.elm-user-pro-member.columbia-article-topic-guide.columbia-group-pro-admin l
     opacity: 1;
 }
 
+    #user-history-top-control a, #user-history-top-control a:visited {
+        color: #3473ac;
+    }
+
     #user-history-top-control #user-history-uparrow {
         line-height: 1.2;
     }
