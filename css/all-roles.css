@@ -175,9 +175,9 @@ body.cke_editable hr, hr, .note-blank, .important, .tip {
     border: 1px solid #B74E29 !important;
 }
 
-img {
+/*img {
     border: 3px solid #B74E29 !important;
-}
+}*/
 
 div {
     display: block;
