@@ -2,7 +2,7 @@
 
 /*Safari Background Picture*/
 .columbia-browser-safari .mt-custom-home {
-    background: url(https://www.nbshubhelp.com/@api/deki/files/937/hero-solutions-leftcrop.jpg);
+    background: url(https://www.nbshubhelp.com/@api/deki/files/2049/longer.jpg);
     background-size: cover;
 }
 
@@ -35,7 +35,7 @@ div.elm-header-logo-container {
 }
 
 .mt-splash-container {
-    background: url(/@api/deki/files/937/hero-solutions-leftcrop.jpg);
+    background: url(/@api/deki/files/2049/longer.jpg);
     background-repeat: repeat;
     background-size: 100% auto;
 }
@@ -75,10 +75,9 @@ h6 {
 
 #mt-toc-container {
     background: #FFF;
-    border: none;
-    /*border: 1px solid #000000;*/
+    border: 1px solid #000000;
     color: #000000;
-    margin-left: 30px;
+    /*margin-left: 30px;*/
 }
 
 /* TOC Header */
@@ -171,8 +170,12 @@ h1.mt-style-conditional, h2.mt-style-conditional, h3.mt-style-conditional, h4.mt
     color: #B74E29;
 }
 
-body.cke_editable hr, hr, .note-blank, .important, .tip {
+body.cke_editable hr.mt-style-conditional, hr.mt-style-conditional, .note-blank.mt-style-conditional, .important.mt-style-conditional, .tip.mt-style-conditional {
     border: 1px solid #B74E29 !important;
+}
+
+img.mt-style-conditional {
+    border: 3px solid #B74E29 !important;
 }
 
 /*img {

@@ -3,7 +3,7 @@
 /*Safari Background Picture*/
 .columbia-browser-safari .mt-custom-home
 {
- background: url(https://www.nbshubhelp.com/@api/deki/files/2049/longer.jpg);
+ background: url(https://www.nbshubhelp.com/@api/deki/files/937/hero-solutions-leftcrop.jpg);
 background-size: cover;
 }
 
@@ -19,9 +19,9 @@ div.elm-header-logo-container {border-style: none !important;}
   padding: 2px;
 }
 .mt-splash-container {
-    background: url(/@api/deki/files/2049/longer.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url(/@api/deki/files/937/hero-solutions-leftcrop.jpg);
+    background-repeat: repeat;
+    background-size: 100% auto;
 }
 
 blockquote {
@@ -169,11 +169,6 @@ body.elm-user-pro-member.columbia-article-topic-guide.columbia-group-pro-admin l
     display: block;
 }
 
-/*Hide Filter Results if No Results*/
-#mt-search-container #mt-help-results .mt-help-breadcrumb-container .mt-carousel-helper-text.mt-hide {
-    display: none;
-}
-
 #user-history-top-control {
 opacity:1;
 }
@@ -261,7 +256,7 @@ line-height:1.2;
     body.cke_editable hr, hr, .note-blank, .important, .tip{
         border: 1px solid #B74E29!important;
     }
-    color: #B74E29;
+    
     img {
         border: 3px solid #B74E29!important;
     }
@@ -287,9 +282,4 @@ div {
 /* Add feedback to video type articles*/
 .columbia-article-topic-video .mt-feedback-rating-container {
      display: block;
-}
-
-/*Hide Search Bar for initial login*/
-body.columbia-special-firstloginwelcome ol li.elm-global-search {
-    visibility: hidden;
 }
