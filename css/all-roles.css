@@ -1,8 +1,50 @@
 @highlight-color: #7fc041;
 
+/*Hiding PDF Icons for Non-Pro Members*/
+.hide-non-pro {
+    display: none;
+}
+
+body.columbia-group-pro-admin .hide-non-pro {
+    display: block;
+}
+
+/*Hiding Article Type for Tabs*/
+h5.mt-classification-heading {
+    display: none;
+}
+
+/*.elm-footer-custom {
+    display: none;
+}*/
+
+/*Hidding Question Mark on Search*/
+a.mt-f1-success.mt-f1-link.mt-icon-f1-link.mt-f1-search {
+    display: none;
+}
+
+/*Collapse Path/Classification Setting*/
+.noindex .mt-guide-tab-settings.mt-toggle-container button.mt-toggle.mt-toggle-collapse:before {
+    content: '\e893';
+}
+
+
+.noindex .mt-guide-tab-settings.mt-toggle-container button.mt-toggle.mt-toggle-expand:before {
+    content: '\e892';
+}
+
+
+.noindex .mt-guide-tab-settings.mt-guide-tab-settings.mt-toggle-container fieldset.mt-fieldset.mt-collapsible-section.mt-show {
+    display: none;
+}
+
 /*Safari Background Picture*/
 .columbia-browser-safari .mt-custom-home {
     background: url(https://www.nbshubhelp.com/@api/deki/files/2049/longer.jpg);
+    background-size: cover;
+}
+
+.mt-custom-home {
     background-size: cover;
 }
 
@@ -194,12 +236,13 @@ div {
     bottom: 20px;
     right: 0px;
     z-index: 100;
-    background: #1F496B;
+    background: #0f4055;
     font-weight: bold;
     visibility: hidden;
     color: #fff !important;
     line-height: 1.2;
     font-size: 100%;
+    opacity: .97;
 }
 
     .mt-icon-back-to-top.move {
@@ -224,7 +267,7 @@ div {
 /*Responsive Mode Back to Top*/
 @media screen and (max-width: 600px) {
     .mt-icon-back-to-top {
-        bottom: 53px;
+        bottom: 55px;
     }
 }
 
@@ -304,7 +347,14 @@ body.elm-user-pro-member.columbia-group-pro-admin .mt-field.mt-classification-fi
 }
 
 /*Hide Topic and Category for Non-Admin*/
-body.elm-user-pro-member.columbia-article-topic-guide li.elm-last-modified, body.elm-user-pro-member.columbia-article-topic-guide li.elm-page-restriction, body.elm-user-pro-member.columbia-article-topic-category li.elm-last-modified, body.elm-user-pro-member.columbia-article-topic-category li.elm-page-restriction, body.columbia-group-school-users.columbia-article-topic-guide li.elm-last-modified, body.columbia-group-school-users.columbia-article-topic-guide li.elm-page-restriction, body.columbia-group-school-users.columbia-article-topic-category li.elm-last-modified, body.columbia-group-school-users.columbia-article-topic-category li.elm-page-restriction {
+body.elm-user-pro-member.columbia-article-topic-guide li.elm-last-modified,
+/*body.elm-user-pro-member.columbia-article-topic-guide li.elm-page-restriction,*/
+body.elm-user-pro-member.columbia-article-topic-category li.elm-last-modified,
+/*body.elm-user-pro-member.columbia-article-topic-category li.elm-page-restriction,*/
+body.columbia-group-school-users.columbia-article-topic-guide li.elm-last-modified,
+body.columbia-group-school-users.columbia-article-topic-guide li.elm-page-restriction,
+body.columbia-group-school-users.columbia-article-topic-category li.elm-last-modified,
+body.columbia-group-school-users.columbia-article-topic-category li.elm-page-restriction {
     display: none;
 }
 
@@ -382,4 +432,21 @@ body.elm-user-pro-member.columbia-group-pro-admin .mt-new-features-container {
     #mt-category-carousel {
         margin-bottom: -20px;
     }
+}
+
+.mt-welcome-redirect:before {
+    content: '\e613';
+}
+
+.columbia-article-topic-qpexternaldotreleases aside#mt-toc-container, .columbia-article-topic-qpinternadotreleases aside#mt-toc-container, .columbia-article-topic-releasenotes aside#mt-toc-container {
+    display: block;
+}
+
+
+.columbia-article-topic-releasenotes ol.elm-meta-data.elm-meta-article-navigation, .columbia-article-topic-qpexternaldotreleases ol.elm-meta-data.elm-meta-article-navigation, .columbia-article-topic-qpinternadotreleases ol.elm-meta-data.elm-meta-article-navigation, .columbia-article-topic-releasenotes .mt-feedback-rating-container, .columbia-article-topic-qpexternaldotreleases .mt-feedback-rating-container, .columbia-article-topic-qpinternadotreleases .mt-feedback-rating-container {
+    display: block;
+}
+
+.elm-header-user-nav a.mt-icon-user-sign-out {
+    color: #999;
 }
