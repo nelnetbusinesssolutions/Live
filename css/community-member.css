@@ -1,20 +1,21 @@
 .elm-meta-bottom {
-     display: none;
+  display: none;
 }
 
 /* Removes Stage, Owner, and Target Audience classification from search page */
-.mt-classification-section-stage, .mt-classification-section-owner, .mt-classification-section-audience{
-    display: none;
+
+.mt-classification-section-stage, .mt-classification-section-owner, .mt-classification-section-audience {
+  display: none;
 }
 
-@media screen and (min-width: 50em)
-{
-.mt-classification-filter .mt-field {
+@media screen and (min-width: 50em) {
+  .mt-classification-filter .mt-field {
     width: 33.33%;
-}
+  }
 }
 
 /*hides the cog icon for user preferences*/
+
 a.mt-icon-user-preferences {
-    Display: none !important;
+  Display: none !important;
 }
