@@ -1,5 +1,10 @@
 @highlight-color: #7fc041;
 
+/*Hiding Recommended Articles for Learning Paths*/
+body.columbia-learning-path .elm-related-articles-container {
+  display: none;
+}
+
 /*Hiding PDF Icons for Non-Pro Members*/
 .hide-non-pro {
     display: none;
@@ -271,7 +276,7 @@ div {
     }
 }
 
-/*Back to to on every Learning Path*/
+/*Back to top on every Learning Path*/
 .columbia-learning-path .elm-meta-article-navigation .elm-back-to-top, .columbia-article-topic-guide #mt-back-to-top {
     display: block;
 }
@@ -449,4 +454,295 @@ body.elm-user-pro-member.columbia-group-pro-admin .mt-new-features-container {
 
 .elm-header-user-nav a.mt-icon-user-sign-out {
     color: #999;
+}
+
+
+/*New TOC color update*/
+aside#mt-toc-container {
+    background-color: #7fc041;
+    border: 2px solid #7fc041;
+}
+
+    aside#mt-toc-container button {
+        color: #fff;
+    }
+
+
+        aside#mt-toc-container button:hover  {
+        color:#fff;
+    }
+
+    aside#mt-toc-container.hh-collapsed {
+        background-color: #fff;
+    }
+
+        aside#mt-toc-container.hh-collapsed button {
+            color: #1F496B;
+        }
+                aside#mt-toc-container.hh-collapsed button:hover {
+            color: #52c5ce;
+        }
+
+    article.elm-content-container aside#mt-toc-container nav ol li a:hover {
+        color: #52c5ce;
+    }
+
+
+/*Learning Path Description Conditional Text*/
+.mt-style-conditional .mt-listing-detailed-overview { 
+    color: #B74E29;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Different color scheme for Catagory/Guide*/
+.mt-category-container a.mt-sortable-listing-link.mt-edit-section.internal, article.elm-content-container section.mt-content-container dl.mt-listing-detailed dt.mt-listing-detailed-title a, article.elm-content-container section.mt-content-container ul.mt-classification-listings.mt-guide-listings li a,  article.elm-content-container section.mt-content-container dl.mt-listing-detailed dd.mt-listing-detailed-subpages ul li a, article.elm-content-container section.mt-content-container dl.mt-listing-detailed dd.mt-listing-detailed-subpages ul li a:visited,  .mt-category-container a.mt-sortable-listing-link.mt-edit-section:visited, article.elm-content-container section.mt-content-container dl.mt-listing-detailed dt.mt-listing-detailed-title a:visited {
+    color: #094a64;
+}
+
+    .mt-category-container a.mt-sortable-listing-link.mt-edit-section:hover, .mt-category-container a.mt-sortable-listing-link.mt-edit-section:active, article.elm-content-container section.mt-content-container dl.mt-listing-detailed dt.mt-listing-detailed-title a:hover, article.elm-content-container section.mt-content-container ul.mt-classification-listings.mt-guide-listings li a:hover, article.elm-content-container section.mt-content-container dl.mt-listing-detailed dt.mt-listing-detailed-title a:active, article.elm-content-container section.mt-content-container dl.mt-listing-detailed dd.mt-listing-detailed-subpages ul li a:hover, article.elm-content-container section.mt-content-container dl.mt-listing-detailed dd.mt-listing-detailed-subpages ul li a:active, article.elm-content-container section.mt-content-container dl.mt-listing-detailed dd.mt-listing-detailed-subpages ul li a:focus {
+        color: #52c5ce;
+    }
+
+/*Learning Path Description Conditional Text*/
+.mt-style-conditional .mt-listing-detailed-overview { 
+    color: #B74E29;
+}
+.mt-style-conditional dl.mt-listing-detailed dd.mt-listing-detailed-overview:hover { 
+    color: #B74E29;
+}
+
+/*New Icon Look*/
+body.elm-user-pro-member .mt-sortable-listing, .mt-sortable-listing, .no-touch .mt-sortable-listing, body.elm-user-pro-member .mt-sortable-listing:active, .mt-sortable-listing:active, body.elm-user-pro-member .mt-sortable-listing:focus, .mt-sortable-listing:focus {
+    border: none;
+    box-sizing: inherit;
+    border-radius: 0;
+}
+
+    body.elm-user-pro-member .mt-sortable-listing:hover, .mt-sortable-listing:hover, .no-touch .mt-sortable-listing:hover, body.elm-user-pro-member .mt-sortable-listing:focus, .mt-sortable-listing:focus, .mt-category-container a.mt-sortable-listing-link.mt-edit-section.internal:focus  {
+     box-shadow: none;
+     color:#52c5ce;
+}
+
+dl dt.mt-listing-detailed-title a:hover, dl dt.mt-listing-detailed-title a:focus {
+color:#52c5ce;
+}
+
+
+dl dd.mt-listing-detailed-overview:hover {
+    color:#000;
+}
+
+/*body.elm-user-pro-member .live-tag-entry a {
+    color:#59882d;
+}*/
+
+
+/*Dropdown Options*/
+body main header nav ol.mt-user-menu-container.mt-dropdown a, body main header nav ol.mt-user-menu-container.mt-dropdown a:visited {
+color: #094a64;
+}
+
+body main header nav ol.mt-dropdown.mt-user-menu-container a:hover {
+    color:#7fc041;
+}
+
+/*.elm-user-pro-member .mt-dropdown a, .mt-dropdown a, .elm-user-pro-member .mt-dropdown a:visited, .mt-dropdown a:visited {
+    color: #094a64;
+}*/
+.no-touch .ui-button-icon:hover, .no-touch a:hover, .ui-button-icon:active, a:active {
+    color: #7fc041;
+}
+
+/*Thumbnail width and Mobile friendliness*/
+.mt-page-summary .mt-page-thumbnail img {
+    max-height: 100px;
+}
+
+@media screen and (max-width:599px) {
+    .mt-page-summary .mt-page-thumbnail img {
+    display:none;
+}
+}
+
+/*.mt-feedback-rating-controls .ui-button-icon {
+    color: #3473ac;
+}*/
+
+/*Feedback Button Color Changes*/
+.mt-rating-button-no.mt-icon-rating-no, .mt-rating-button-yes.mt-icon-rating-yes, .mt-feedback-button.mt-icon-leave-feedback {
+   color: #094a64;
+}
+
+.mt-feedback-rating-controls .mt-rating-button-no.mt-selected, .mt-feedback-rating-controls .mt-rating-button-no.ui-button-icon:active, .mt-feedback-rating-controls .mt-rating-button-no.ui-button-icon:focus, .no-touch .mt-feedback-rating-controls .mt-rating-button-no.ui-button-icon:hover {
+   color:#7fc041;
+}
+
+.mt-feedback-rating-controls .mt-rating-button-yes.mt-selected, .mt-feedback-rating-controls .mt-rating-button-yes.ui-button-icon:active, .mt-feedback-rating-controls .mt-rating-button-yes.ui-button-icon:focus, .no-touch .mt-feedback-rating-controls .mt-rating-button-yes.ui-button-icon:hover {
+      color: #7fc041;
+}
+
+.elm-footer-custom .nbs-footer .links li {
+font-weight:bold;
+}
+
+header.elm-header nav.header-links {
+    font-weight: bold;
+}
+
+/*PDF & Subscription color change*/
+.elm-page-notifications .mt-icon-page-notification, .elm-page-notifications .mt-icon-page-notification:active, .elm-page-notifications .mt-icon-page-notification:visited, .elm-page-notifications .mt-icon-page-notification.off:visited:visited {
+    color: #094a64 !important;
+}
+.elm-pdf-export .mt-icon-article-pdf, .elm-pdf-export .mt-icon-article-pdf:active .elm-pdf-export .mt-icon-article-pdf:visited {
+    color: #094a64;
+}
+
+.elm-pdf-export .mt-icon-article-pdf:hover {
+    color: #52c5ce !important;
+}
+
+.elm-page-notifications .mt-icon-page-notification:hover,.elm-page-notifications .mt-icon-page-notification.off:hover {
+    color: #52c5ce !important;
+}
+
+/*Color change for Next/Previous links*/
+footer ol.elm-meta-data ul.mt-article-pagination li a, footer ol.elm-meta-data ul.mt-article-pagination li a span, footer ol.elm-meta-data ul.mt-article-pagination li a.mt-icon-next-article span,footer ol.elm-meta-data ul.mt-article-pagination li a:hover, footer ol.elm-meta-data ul.mt-article-pagination li a span:hover, footer ol.elm-meta-data ul.mt-article-pagination li a:visited, footer ol.elm-meta-data ul.mt-article-pagination li a span:visited {
+   color: #3473AC;
+}
+
+footer ol.elm-meta-data ul.mt-article-pagination li a:hover, footer ol.elm-meta-data ul.mt-article-pagination li a span:hover {
+   color: #52c5ce;
+}
+
+/*Color change for Next/Previous Links on Learning Paths*/
+   ul.mt-article-pagination li a, ul.mt-article-pagination li a span, ul.mt-article-pagination li a:visited, ul.mt-article-pagination li a span:visited {
+       color: #3473AC;
+   }
+
+   ul.mt-article-pagination li a:hover, ul.mt-article-pagination li a:active, ul.mt-article-pagination li a span:hover, ul.mt-article-pagination li a span:active {
+   color: #52c5ce;
+}
+
+ul.mt-article-pagination li a.mt-disabled span, ul.mt-article-pagination li a.mt-disabled{
+   color:#a7a7a7 !important;
+}
+
+/*Bolding TOC links and changing hover activity*/
+aside#mt-toc-container .mt-toc-content ol a {
+   /* font-weight:bold; */
+}
+
+aside#mt-toc-container .mt-toc-content ol li a:hover, aside#mt-toc-container .mt-toc-content ol li a:active, aside#mt-toc-container .mt-toc-content ol li a:focus {
+   color: #52c5ce;
+}
+
+/*Breadcrumbs color change*/
+nav.elm-header-global-nav ol.mt-breadcrumbs li a, nav.elm-header-global-nav ol.mt-breadcrumbs li:after, nav.elm-header-global-nav ol.mt-breadcrumbs li a span, nav.elm-header-global-nav button.elm-hierarchy-trigger {
+    color:#094a64;
+}
+
+nav.elm-header-global-nav ol.mt-breadcrumbs li a:hover, nav.elm-header-global-nav ol.mt-breadcrumbs li a:hover span, nav.elm-header-global-nav ol.mt-breadcrumbs li a span:hover, nav.elm-header-global-nav button.elm-hierarchy-trigger:hover{
+    color:#52c5ce;
+}
+
+/*Changing color/behaviour of Expandable list*/
+dl.expand dt.expand{
+   color: #3473ac;
+}
+
+dl.expand dt.expand:hover{
+   color: #52c5ce;
+}
+
+/*Changing Classifaction colors for Pro Members only*/
+body.elm-user-pro-member ol.elm-meta-data li.elm-classifications dl.mt-classification dd a, body.elm-user-pro-member ol.elm-meta-data li.elm-classifications dl.mt-classification dd a:visited, body.elm-user-pro-member ol.elm-meta-data li.elm-tags ol li.mt-tag-link a:visited  {
+   color:#7fc041;
+}
+
+body.elm-user-pro-member ol.elm-meta-data li.elm-classifications dl.mt-classification dd a:hover, body.elm-user-pro-member ol.elm-meta-data li.elm-classifications dl.mt-classification dd a:active, body.elm-user-pro-member ol.elm-meta-data li.elm-tags ol li.mt-tag-link a:hover, body.elm-user-pro-member ol.elm-meta-data li.elm-tags ol li.mt-tag-link a:active{
+   color:#59882d;
+}
+
+/*Learning Path Title Links*/
+article.elm-content-container section.mt-content-container .mt-lp-path-container dl.mt-listing-detailed dt.mt-listing-detailed-title a, article.elm-content-container section.mt-content-container .mt-lp-path-container dl.mt-listing-detailed dt.mt-listing-detailed-title a:visited {
+    color:#3473ac;
+}
+
+article.elm-content-container section.mt-content-container .mt-lp-path-container dl.mt-listing-detailed dt.mt-listing-detailed-title a:hover, article.elm-content-container section.mt-content-container .mt-lp-path-container dl.mt-listing-detailed dt.mt-listing-detailed-title a:active {
+    color:#7fc041;
+}
+
+/*.mt-learningpath-widget .mt-toggle dl dt a, .mt-learningpath-widget .mt-toggle dl dt a:visited {
+    color:#3473ac;
+}
+
+.mt-learningpath-widget .mt-toggle dl dt a:hover, .mt-learningpath-widget .mt-toggle dl dt a:active {
+    color: #7FC041;
+}*/
+
+/*Links within Articles*/
+article.elm-content-container section.mt-content-container a {
+    color: #3473ac;
+}
+
+article.elm-content-container section.mt-content-container a:hover, article.elm-content-container section.mt-content-container a:active, article.elm-content-container section.mt-content-container a:hover:visited {
+    color: #52c5ce;
+}
+
+
+/*Catagory and Guide descriptions in Detailed View, Learning Path hover fix*/
+.mt-sortable-listing:hover, .no-touch .mt-sortable-listing:hover, body .mt-sortable-listing:focus, body .mt-sortable-listing:hover, body mt-sortable-listing.mt-sortable-lp-page:hover dd {
+    color:#000 !important;
+}
+
+/*Editor text revert to default/Editor Fixes*/
+.cke_menubar .cke_menubar_menuitem {
+    color: #444 !important;
+}
+
+.deki-content-edit a:hover {
+    color:#52c5ce;
+}
+
+/*Related/Recommended Articles Color Changes*/
+footer .elm-related-articles-container ol li a:hover, footer .elm-related-articles-container ol li a:active, footer .elm-related-articles-container ol li a:focus {
+    color:#7fc041;
+}
+
+/*I.E. Login Fix*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+footer.elm-footer .nbs-footer .copyright-info p {
+margin-bottom: 0;
+padding-bottom: 5px;
+}
+}
+
+/*Revision History Button color fix*/
+.history-version-container a#page-history-diff-button {
+    color: #fff;
 }
