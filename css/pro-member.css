@@ -1,17 +1,18 @@
 /* Changes the colors for the search bar */
-
 .elm-user-pro-member .mt-quick-search-container .mt-search {
-  background: #fff;
+    background: #fff;
 }
 
 .elm-user-pro-member .mt-quick-search-container .mt-search {
-  color: #000;
+    color: #000;
 }
 
 .elm-user-pro-member .mt-quick-search-container .mt-button {
-  color: #999;
+    color: #999;
 }
 
 #mt-structuredtags-export-button {
-  display: block;
+    display
+
+: block;
 }
