@@ -985,8 +985,133 @@ font-size: 16px;
 
 
 /*Hiding Related Articles*/
-
-
 footer.elm-content-footer .elm-related-articles-container {
 display:none;
+}
+
+
+
+/*Printer Friendly Icon*/
+.mt-icon-article-pdf:before {
+    content: '\e651';
+}
+
+
+/*Table*/
+table {
+border-bottom: none;
+}
+
+
+/*Site Map & Detailed View Fix*/
+dd.mt-listing-detailed-subpages ul li a span, dl.mt-listing-detailed dt a span, dl.mt-listing-detailed dd button.mt-icon-expand-collapse {
+    color: #094a64;
+}
+
+/*nav.elm-nav.elm-header-hierarchy .fancytree-title, nav.elm-nav.elm-header-hierarchy .fancytree-icon, nav.elm-nav.elm-header-hierarchy .fancytree-expander {
+color: #094a64;
+}*/
+
+nav.elm-nav.elm-header-hierarchy .fancytree-node span {
+color: #094a64;
+}
+
+nav.elm-nav.elm-header-hierarchy span.fancytree-active.fancytree-focused span.fancytree-title
+{
+color:#52c5ce;
+}
+
+nav.elm-nav.elm-header-hierarchy .fancytree-node.fancytree-focused span.fancytree-title:hover {
+color:#52c5ce;
+}
+
+nav.elm-nav.elm-header-hierarchy .no-touch .fancytree-node:hover span, nav.elm-nav.elm-header-hierarchy .fancytree-node:hover span{
+color:#52c5ce;
+}
+
+dl.mt-listing-detailed dd button.mt-icon-expand-collapse:hover {
+color:#52c5ce;
+}
+
+/*Ellipsis Fix*/
+.elm-header-global-nav .mt-icon-hierarchy-mobile-view-trigger, .elm-header-global-nav .mt-icon-hierarchy-mobile-view-trigger:focus, .elm-header-global-nav .mt-icon-hierarchy-mobile-view-trigger:active {
+    color: #094a64;
+}
+
+    .elm-header-global-nav .mt-icon-hierarchy-mobile-view-trigger:active, .no-touch .elm-header-global-nav .mt-icon-hierarchy-mobile-view-trigger:hover {
+        color: #52c5ce;
+    }
+
+
+/*Top Navigation Links*/
+.elm-header-homepage-nav .elm-homepage-nav-item a {
+    color: #6c9b3e;
+}
+
+.elm-header-homepage-nav .elm-homepage-nav-item a:hover {
+    color: #094A64;
+}
+
+
+@media screen and (max-width: 800px) {
+.elm-header-homepage-nav.elm-nav{
+display: none;
+}
+}
+
+
+/*Hide Attachments*/
+
+.elm-attachments  {
+display: none;
+}
+
+body.columbia-group-pro-admin .elm-attachments {
+display: block;
+}
+.columbia-article-media-repository .elm-attachments {
+display: block;
+}
+
+
+/*Pagination for Release notes*/
+
+/*body.columbia-article-topic-qpinternaldotreleases ul.mt-article-pagination.show-pag {
+    display: block !important;
+}
+
+body.columbia-article-topic-qpexternaldotreleases ul.mt-article-pagination.show-pag{
+display: block !important;
+}*/
+
+/*Help Text*/
+.mt-carousel-helper-text {
+    display: none;
+}
+
+.mt-carousel-helper-text.refine {
+    display: block;
+margin-left: 0;
+}
+
+/*User name keep until Tablet*/
+
+body.elm-user-community .elm-header-user-nav .elm-nav-container ol li.elm-user-menu a{
+    text-overflow: initial;
+}
+
+@media screen and (max-width: 1043px) {
+body .elm-header-user-nav .elm-nav-container ol li.elm-user-menu a {
+    width: 100%;
+}
+body .elm-header-user-nav .elm-nav-container ol li.elm-user-menu a:before {
+    vertical-align: middle;
+}
+
+}
+
+@media screen and (max-width: 953px) {
+body .elm-header-user-nav .elm-nav-container ol li.elm-user-menu a {
+width: 1.95em;
+}
 }
