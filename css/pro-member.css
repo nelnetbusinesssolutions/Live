@@ -12,7 +12,45 @@
 }
 
 #mt-structuredtags-export-button {
-    display
+    display: block;
+}
 
-: block;
+
+
+
+/*Hide Attachments*/
+
+.elm-attachments  {
+display: none;
+}
+.columbia-article-media-repository .elm-attachments {
+display: block;
+}
+
+
+
+/*.columbia-group-pro-viewer .section#attachments.elm-attachments, columbia-group-pro-editor .section#attachments.elm-attachments, .columbia-group-pro-author .section#attachments.elm-attachments  {
+    display: none;
+}*/
+
+
+
+
+/*Hide Classification Filters*/
+.columbia-group-pro-viewer .mt-classification-filter-container.mt-search-classification-widget {
+    display: none;
+}
+
+.columbia-group-pro-viewer.columbia-group-pro-draft .mt-classification-filter-container.mt-search-classification-widget {
+display: block
+}
+
+
+/*Hide Subscribe*/
+
+body.columbia-group-pro-viewer.columbia-group-pro-draft li.elm-page-notifications {
+display: inline-block;
+}
+.columbia-group-pro-viewer li.elm-page-notifications {
+    display: none;
 }
