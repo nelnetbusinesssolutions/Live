@@ -18,3 +18,12 @@
 a.mt-icon-user-preferences {
     Display: none !important;
 }
+
+/*Displays Blue Nav Bar*/
+nav.elm-header-user-nav.elm-nav {
+    display: block;
+}
+
+.mt-classification-filter-container.mt-search-classification-widget {
+    display: none;
+}
