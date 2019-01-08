@@ -15,9 +15,9 @@
 }
 
 /*hides the cog icon for user preferences*/
-a.mt-icon-user-preferences {
+/*a.mt-icon-user-preferences {
     Display: none !important;
-}
+}*/
 
 /*Displays Blue Nav Bar*/
 nav.elm-header-user-nav.elm-nav {

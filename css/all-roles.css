@@ -670,7 +670,7 @@ nav.elm-header-global-nav ol.mt-breadcrumbs li a:hover, nav.elm-header-global-na
     color:#52c5ce;
 }
 
-/*Changing color/behaviour of Expandable list*/
+/* ***Expandable List Styles*** */
 dl.expand dt.expand{
    color: #3473ac;
 }
