@@ -9,7 +9,7 @@ table, table td, table th {width: auto !important}
     margin: 0.85in 0.55in .55in 0.55in;
 
     @top-left {
-        
+        content: flow(header);
         vertical-align: bottom;
         border-bottom: 1px solid #ccc;
         padding-bottom: 5px;
@@ -57,6 +57,10 @@ img[style], img {
 }
 
 /* header */
+.mt-permission-indicator {
+    flow: static(header);
+}
+
 .pdf-logo {
     static: url(https://a.mtstatic.com/@public/production/site_6395/1456441833-social-share.png);
     background: #0f4055;
@@ -69,6 +73,16 @@ img[style], img {
 }
 .pdf-site-title {
     display: inline-block;
+}
+
+/*Page Access Flag*/
+.mt-permission-indicator {
+    background-color: #deefcf;
+    border: 1px solid #7fc041;
+    width: 200px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 2px;
 }
 
 /* footer */

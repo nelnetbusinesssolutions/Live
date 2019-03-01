@@ -1115,3 +1115,54 @@ body .elm-header-user-nav .elm-nav-container ol li.elm-user-menu a {
 width: 1.95em;
 }
 }
+
+/* page access requirement indicator */
+.mt-content-side {
+    clear: both;
+    @media all and (min-width: 18.75em) {
+        float: left;
+    }
+    @media all and (min-width: 37.5em) {
+        float: right;
+    }
+}
+.mt-permission-indicator {
+    border-radius: @border-radius-lsf;
+    background: #fff;
+    /*.mt-highlight-container;*/
+    clear: none;
+    display: block;
+    float: right;
+    font-size: 100%;
+    font-weight: bold;
+    margin: 0 0 1em 1em;
+    overflow: hidden;
+    width: 12.75em;
+    text-align: right;
+    @media all and (min-width: 18.75em) {
+        margin: 0 0 1em;
+    }
+    @media all and (min-width: 37.5em) {
+        margin: 0 0 1em 1em;
+    }
+    @media all and (max-width: 37.5em) {
+        text-align: left;
+    }
+}
+
+
+.mt-permission-indicator-value {
+    clear: both;
+}
+.mt-permission-indicator-value:before {
+    content: '\e6c5';
+    .icon-font-declaration;
+    margin-right: .5em;
+    color: #b13a69;
+}
+
+.mt-page-summary {
+    @media all and (max-width: 37.5em) {
+        clear: both;
+    }
+}
