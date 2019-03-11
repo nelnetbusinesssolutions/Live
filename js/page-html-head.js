@@ -6,6 +6,76 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-P83KPRW');</script>
 <!-- End Google Tag Manager -->
 
+<script>
+/* Expandable List Functionality */
+
+//Wrap the text of each dt in a button and assign aria values
+$(document).ready(function() {
+    $('.expandable-list dt').each(function(index) {
+        $(this).wrapInner( '<button aria-controls="item-' + (index + 1) + '" aria-expanded="false"><span></span></button>' );
+        $(this).next('.expandable-list dd').attr('id', 'item-' + (index + 1));
+    });
+
+    $('.expandable-list dt').click(function(e) {
+        e.preventDefault();
+        // Add the open class to the clicked dt and corresponding dd
+        $(this).toggleClass('open').next('.expandable-list dd').toggleClass('open');
+        //Change the aria-expanded attribute from 'true' to 'false' or 'false' to 'true'
+        $(this).children('button').attr('aria-expanded', function(i, origValue) {
+            if (origValue == 'true') {
+                return 'false';
+            } else {
+                return 'true';
+            };
+        });
+        //Slide
+        if ( $(this).hasClass('open')) {
+            $(this).next('.expandable-list dd').slideDown();
+        } else {
+            $(this).next('.expandable-list dd').slideUp();
+        };
+    });
+
+    //Adjust width of expandable list based on TOC state
+    function checkTocState() {
+        if ($('#mt-toc-container .mt-toggle').hasClass('mt-toggle-collapse')) {
+            $('dl.expandable-list').addClass('toc-avoid');
+        } else {
+            $('dl.expandable-list').removeClass('toc-avoid');
+        };
+    }
+
+    checkTocState();
+    $('#mt-toc-container .mt-toggle').click(function () {checkTocState()});
+
+/* Expandable List Expand/Collapse All Button */
+    //Create the button before each list
+    $('<div class="expand-button"><a class="toggle-all"></a></div>').insertBefore('dl.expandable-list');
+    $('a.toggle-all').text('Expand/Collapse All');
+
+    //On click
+    $("a.toggle-all").on("click", function(e) {
+        e.preventDefault();
+        let target = $(e.target);
+        let targetDL = target.parent().next('.expandable-list');
+        //Count the number of items and the number of open items
+        let openItems = targetDL.children('dt.open');
+        let allItems = targetDL.children('dt');
+        //If less than half of the items are open, open all. Otherwise, close all items.
+        targetDL.children('dt').toggleClass('open', openItems.length <= allItems.length/2);
+        targetDL.children('dd').toggleClass('open', openItems.length <= allItems.length/2);
+        //If the dt has a class of open, change the button aria-expanded attribute to true.
+        //Otherwise, change it to false.
+        if ($('.expandable-list dt').hasClass('open')) {
+            $('.expandable-list dt button').attr('aria-expanded', 'true');
+            $('.expandable-list dt').next('.expandable-list dd').slideDown();
+        } else {
+            $('.expandable-list dt button').attr('aria-expanded', 'false');
+            $('.expandable-list dt').next('.expandable-list dd').slideUp();
+        };
+    });
+});
+</script>
 
 <script>
 $(document).ready(function () {

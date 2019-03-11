@@ -586,6 +586,15 @@ margin-right: auto;
 display:block;
 }
 
+/* Expandable List CSS */
+.expand-button {
+    display: none;
+}
+
+.expandable-list {
+    margin-top: 10px;
+}
+
 /* Checklist CSS */
 .reset-checklist, .checklist-note {
     display: none;
