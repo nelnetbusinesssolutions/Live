@@ -585,3 +585,8 @@ margin-left: auto;
 margin-right: auto;
 display:block;
 }
+
+/* Checklist CSS */
+.reset-checklist, .checklist-note {
+    display: none;
+}

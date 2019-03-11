@@ -121,3 +121,62 @@ $(document).on('click', 'aside#mt-toc-container button.mt-toggle', function () {
   });
 
 </script>
+<script>
+/* Checklist Functionality to Retain Checks */
+window.addEventListener('DOMContentLoaded', function() {
+    //Selects all checkboxes and puts them in an array
+    const boxes = document.querySelectorAll('#todo-list input'),
+          boxesArray = Array.prototype.slice.call(boxes),
+          //Get the pathname of the URL
+          pathname = window.location.pathname;
+
+    //Put any stored data into the variable checks
+    if (localStorage[pathname]) {
+        let checks = JSON.parse(localStorage.getItem(pathname));
+        //Iterate through checks
+        Object.keys(checks).forEach(function(key) {
+            //Set the value of the checked attribute on each box
+            //equal to the value stored in checks at the same index
+            let val = checks[key];
+            boxes[key].setAttribute('checked', val);
+        });
+    };
+
+    //Empty object to collect data
+    let boxStatus = {};
+    //Iterate through boxesArray
+    boxesArray.forEach(function(box, index) {
+        //If the box is checked, create a boxStatus entry with a value of true
+        if (box.checked == true) {
+            boxStatus[index] = true;
+        };
+        //Listen for clicks on each checkbox
+        box.addEventListener('click', function() {
+            //If you check the box, the boxStatus value is equal to true
+            //If you uncheck a box, the boxStatus value is equal to undefined
+            if (box.checked == true) {
+                boxStatus[index] = true;
+            } else {
+                boxStatus[index] = undefined;
+            };
+            //Store the new value
+            localStorage.setItem(pathname, JSON.stringify(boxStatus));
+        });
+    });
+
+    let resetButton = document.querySelectorAll('.reset-checklist'),
+        resetButtonArray = Array.prototype.slice.call(resetButton);
+    //Add listener to reset button
+    resetButtonArray.forEach(function(button) {
+        button.addEventListener('click', function() {
+        //Uncheck each box and empty boxStatus
+            boxesArray.forEach(function(box, index) {
+                box.checked = false;
+                boxStatus = {}
+            });
+        //Remove the article path from localStorage
+        localStorage.removeItem(pathname);
+        });
+    });
+});
+</script>
