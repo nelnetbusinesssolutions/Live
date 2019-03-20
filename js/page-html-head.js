@@ -192,6 +192,126 @@ $(document).on('click', 'aside#mt-toc-container button.mt-toggle', function () {
 
 </script>
 <script>
+/*** Creating tooltips for each page settings classification ***/
+
+window.addEventListener('DOMContentLoaded', function() {
+if (document.querySelector('#mt-summary')) {
+function PageSettingTooltip (name, id) {
+    //Name and id are used for selecting elements
+    this.name = name;
+    this.id = id;
+    //Default text for tooltip
+    this.description = 'Select the appropriate option from the drop-down.';
+}
+
+//Add a question mark icon before the label
+PageSettingTooltip.prototype.appendIcon = function() {
+    var questionIcon = document.createElement('SPAN'),
+          parentDiv = document.querySelector(this.id).parentElement,
+          label = document.querySelector(this.id);
+    //This class adds the question mark image in MT
+    questionIcon.classList.add('mt-icon-question2');
+    //Giving the questionIcon an id so it can be selected later
+    questionIcon.id = this.name + '-qicon';
+    //Insert the icon before the label
+    parentDiv.insertBefore(questionIcon, label);
+};
+
+//Add a tooltip to the icon
+PageSettingTooltip.prototype.addTooltip = function() {
+    var classTooltip = document.createElement('DIV'),
+          questionIcon = document.querySelector('#' + this.name + '-qicon');
+    //Add two classes to the tooltip for styling
+    classTooltip.classList.add('class-tooltip');
+    classTooltip.classList.add('class-tooltip-hidden');
+    //The tooltip text is the class description
+    classTooltip.textContent = this.description;
+    //Append the tooltip to the question icon
+    questionIcon.appendChild(classTooltip);
+    //The tooltip will display the question icon is hovered over
+    questionIcon.addEventListener('mouseenter', function() {
+        classTooltip.classList.remove('class-tooltip-hidden');
+    });
+    questionIcon.addEventListener('mouseleave', function() {
+        classTooltip.classList.add('class-tooltip-hidden')
+    });
+};
+
+//Grab all the page classification labels
+var allLabels = document.querySelectorAll('.live-tag-label'),
+      labelsArray = Array.prototype.slice.call(allLabels);
+//Empty array to hold each of the instantiated PageSettingTooltip objects
+var pstArray = [];
+
+//Iterate through each of the page classification labels
+labelsArray.forEach(function(x, index) {
+    //Define the name and id for each object
+    var classifName = labelsArray[index].innerHTML.replace(/\s+/g, '-').toLowerCase();
+    var classifId = '#' + labelsArray[index].id;
+    //Instantiate a new PageSetting Tooltip
+    pstArray[index] = new PageSettingTooltip(classifName, classifId);
+    //Add the icon
+    pstArray[index].appendIcon();
+});
+
+    /* *Section for defining page setting classification tooltip text * */
+pstArray[0].description = "Controls page display and hierarchy"; //Article type
+pstArray[1].description = "If applies to all or none, choose \'Not Market Specific\'"; //Market
+pstArray[2].description = "Person responsible for updating page; receives all feedback"; //Owner
+pstArray[3].description = "Who the article was written for, though others may have access"; //Target Audience
+pstArray[4].description = "Track when the article is ready for posting or needs editing"; //Stage
+pstArray[5].description = "Select an option, NA, or Multi-product"; //Product
+pstArray[6].description = "Controls URL for authentication"; //Platform
+pstArray[7].description = "Used for release notes; not required for other pages"; //Year
+pstArray[8].description = "Controls Internal Use Only flag"; //Page Access
+
+//Iterate through labelsArray to add the tooltip
+labelsArray.forEach(function(x, index) {
+    pstArray[index].addTooltip();
+});
+
+//Add an icon/tooltip to the Tags and Summary labels
+function tooltipMaker (a, b, c) {
+    //Add the icon
+    var label = a,
+        parent = b,
+        icon = document.createElement('SPAN');
+    icon.classList.add('mt-icon-question2');
+    icon.id = label.textContent.toLowerCase() + '-qicon';
+    parent.insertBefore(icon, label);
+    //Add the tooltip
+    var tooltip = document.createElement('DIV');
+    tooltip.classList.add('class-tooltip');
+    tooltip.classList.add('class-tooltip-hidden');
+    //Add tooltip text
+    tooltip.textContent = c;
+    //Append the tooltip to the icon
+    icon.appendChild(tooltip);
+    //The tooltip will display when the question mark icon is hovered over
+    icon.addEventListener('mouseenter', function() {
+        tooltip.classList.remove('class-tooltip-hidden');
+    });
+    icon.addEventListener('mouseleave', function() {
+        tooltip.classList.add('class-tooltip-hidden');
+    });
+}
+
+//Wait for MT to append nodes to .mt-collapsible-section, then create Summary tooltip
+if (window.MutationObserver) {
+    var summContainer = document.querySelector('#mt-summary .mt-collapsible-section');
+    var observer = new MutationObserver(function(mutations) {
+        tooltipMaker(document.querySelector('.mt-overview-label'), document.querySelector('.mt-overview-container'), '2-3 sentences displayed in search results');
+    });
+    observer.observe(summContainer, {childList: true});
+};
+
+//Create Tags tooltip
+tooltipMaker(document.querySelector('#live-tag-input-area label'), document.querySelector('#live-tag-input-area'), '3-10 tags (search terms)');
+
+};
+});
+</script>
+<script>
 /* Checklist Functionality to Retain Checks */
 window.addEventListener('DOMContentLoaded', function() {
     //Selects all checkboxes and puts them in an array
