@@ -670,15 +670,6 @@ nav.elm-header-global-nav ol.mt-breadcrumbs li a:hover, nav.elm-header-global-na
     color:#52c5ce;
 }
 
-/* ***Expandable List Styles*** */
-dl.expand dt.expand{
-   color: #3473ac;
-}
-
-dl.expand dt.expand:hover{
-   color: #52c5ce;
-}
-
 /*Changing Classifaction colors for Pro Members only*/
 body.elm-user-pro-member ol.elm-meta-data li.elm-classifications dl.mt-classification dd a, body.elm-user-pro-member ol.elm-meta-data li.elm-classifications dl.mt-classification dd a:visited, body.elm-user-pro-member ol.elm-meta-data li.elm-tags ol li.mt-tag-link a:visited  {
    color:#7fc041;
@@ -1041,6 +1032,67 @@ color:#52c5ce;
     .elm-header-global-nav .mt-icon-hierarchy-mobile-view-trigger:active, .no-touch .elm-header-global-nav .mt-icon-hierarchy-mobile-view-trigger:hover {
         color: #52c5ce;
     }
+
+/*Expandable List: Simple*/
+.expand dt {
+    color: #3473ac;
+    cursor: pointer;
+    padding: 2px 0;
+    overflow: hidden;
+}
+
+.expand dt:hover {
+    color: #52c5ce;
+}
+
+.expand dt button,
+.expand dt button:hover,
+.expand dt button:focus,
+.expand dt button:active {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    line-height: inherit;
+    font-weight: 700;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+}
+
+.expand dt button:focus {
+    outline: 1px dotted #7fc041;
+}
+
+dl.expand button::before {
+    font: 400 140%/1 icomoon;
+    position: relative;
+    top: .2em;
+    padding-right: 5px;
+    content: '\e893';
+    display: inline-block;
+  }
+
+  dl.expand dt.open button::before {
+      content: '\e892';
+  }
+
+.expand span {
+    min-width: 0;
+    text-align: left;
+}
+
+.expand dd {
+    display: none;
+    padding-left: 2em;
+    margin-top: .75em;
+}
+
+.deki-content-edit .expand dd {
+    display: block;
+}
 
 /*Expandable List: Block Color Behaviour*/
 dl.expandable-list {
