@@ -614,20 +614,34 @@ header.elm-header nav.header-links {
     font-weight: bold;
 }
 
-/*PDF & Subscription color change*/
-.elm-page-notifications .mt-icon-page-notification, .elm-page-notifications .mt-icon-page-notification:active, .elm-page-notifications .mt-icon-page-notification:visited, .elm-page-notifications .mt-icon-page-notification.off:visited:visited {
+/* Meta Icon Styles */
+
+.elm-meta-icons ul {
+    display: flex;
+}
+
+.elm-meta-icons li {
+    margin: auto 2px;
+}
+
+.elm-meta-icons li [class^='mt-icon'] {
     color: #094a64 !important;
 }
-.elm-pdf-export .mt-icon-article-pdf, .elm-pdf-export .mt-icon-article-pdf:active .elm-pdf-export .mt-icon-article-pdf:visited {
-    color: #094a64;
-}
 
-.elm-pdf-export .mt-icon-article-pdf:hover {
+.elm-meta-icons li [class^='mt-icon']:hover {
     color: #52c5ce !important;
 }
 
-.elm-page-notifications .mt-icon-page-notification:hover,.elm-page-notifications .mt-icon-page-notification.off:hover {
-    color: #52c5ce !important;
+
+    /*Meta Icon Margin Adjustment*/
+@media (max-width: 37.5em) {
+    .elm-meta-data .elm-pdf-export {
+        margin: auto 2px;
+    }
+}
+
+.elm-meta-data .elm-meta-icons {
+    margin: 0 0 1rem 0;
 }
 
 /*Color change for Next/Previous links*/
