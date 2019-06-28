@@ -713,11 +713,17 @@ article.elm-content-container section.mt-content-container .mt-lp-path-container
 /*Links within Articles*/
 article.elm-content-container section.mt-content-container a {
     color: #3473ac;
+    font-weight: 800;
+}
+
+div#cke_editarea_shared_top a {
+    font-weight: normal;
 }
 
 article.elm-content-container section.mt-content-container a:hover, article.elm-content-container section.mt-content-container a:active, article.elm-content-container section.mt-content-container a:hover:visited {
     color: #52c5ce;
 }
+
 
 
 /*Catagory and Guide descriptions in Detailed View, Learning Path hover fix*/
