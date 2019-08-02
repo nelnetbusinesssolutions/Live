@@ -1,22 +1,28 @@
-<!-- Full Story -->
-<script>
-window['_fs_debug'] = false;
-window['_fs_host'] = 'fullstory.com';
-window['_fs_org'] = 'MQQXX';
-window['_fs_namespace'] = 'FS';
-(function(m,n,e,t,l,o,g,y){
-    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
-    g=m[e]=function(a,b,s){g.q?g.q.push([a,b,s]):g._api(a,b,s);};g.q=[];
-    o=n.createElement(t);o.async=1;o.crossOrigin='anonymous';o.src='https://'+_fs_host+'/s/fs.js';
-    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
-    g.identify=function(i,v,s){g(l,{uid:i},s);if(v)g(l,v,s)};g.setUserVars=function(v,s){g(l,v,s)};g.event=function(i,v,s){g('event',{n:i,p:v},s)};
-    g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
-    g.consent=function(a){g("consent",!arguments.length||a)};
-    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
-    g.clearUserCookie=function(){};
-})(window,document,window['_fs_namespace'],'script','user');
+<!-- SmartLook -->
+<script type='text/javascript'>
+  window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', 'f78fcb0302f7a79b9d471904cb52d113fc5c127a');
 </script>
-<!-- End Full Story -->
+<script>
+fetch('https://www.nbshubhelp.com/@api/deki/users/current?dream.out.format=json')
+.then(response => response.json())
+.then(json => {
+    var userId = json['@id'];
+    var userName = json['fullname'];
+    var userGroup = json.groups.group.groupname || json.groups.group[0].groupname;
+    var userGroup2 = Array.isArray(json.groups.group) && json.groups.group.length > 1 ? json.groups.group[1].groupname : undefined;
+    smartlook('identify', userId, {
+        'name': userName,
+        'group': userGroup,
+        'group2': userGroup2
+    });
+});
+</script>
+<!-- End SmartLook -->
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -156,26 +162,8 @@ $('body.columbia-article-topic-qpinternadotreleases .mt-article-pagination, body
 
 //$('input.mt-help.mt-inputredirect-input.ui-dform-input, input.mt-text.mt-search.search-field').addClass('data-hj-whitelist');
 });
-<!-- Hotjar Tracking Code for www.nbshubhelp.com -->
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:698438,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 
-<script type="text/javascript">
-    window._mfq = window._mfq || [];
-    (function() {
-        var mf = document.createElement("script");
-        mf.type = "text/javascript"; mf.async = true;
-        mf.src = "//cdn.mouseflow.com/projects/13a9ca41-9816-41cf-ac46-aa5cb3326741.js";
-        document.getElementsByTagName("head")[0].appendChild(mf);
-    })();
-</script>
 
 <script>
 $(document).ready(function () {
