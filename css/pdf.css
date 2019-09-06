@@ -610,3 +610,8 @@ display:block;
 .reset-checklist, .checklist-note {
     display: none;
 }
+
+/* Bold Links */
+a {
+    font-weight: 800;
+}
