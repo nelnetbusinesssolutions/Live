@@ -1357,6 +1357,11 @@ width: 1.95em;
     }
 }
 
+/* Hiding Copyright and Safe Harbor Info from Website */
+.pdf-only {
+    display: none;
+}
+
 /* Blue Button Template CSS */
 #elm-main-content .hh-btn, .hh-btn {
     display: inline-block;
