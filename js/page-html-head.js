@@ -170,7 +170,7 @@ $(document).ready(function () {
 
 
         $(".mt-lp-progress-bar li").each(function(i) {
-            $(this).append('<div class="number">' + (++i) + "</div>");
+            $(this).find('.mt-icon-progress-indicator').append('<div class="number">' + (++i) + "</div>");
         });
 
         $(document).on("click", ".mt-lp-progress-bar li .number", function() {
@@ -180,6 +180,7 @@ $(document).ready(function () {
         $('.mt-lp-progress-bar li .number').hover(function() {
             $(this).closest('li').find('span').toggleClass('j-border');
         });
+
 
 
 
@@ -432,3 +433,6 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+/* Polyfill for ES6 and fetch */
+//Keep this at the end of the head to avoid breaking other scripts
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2Cfetch"></script>

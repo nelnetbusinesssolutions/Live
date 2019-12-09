@@ -2,7 +2,7 @@
 <script>
     $(document).ready(function() {
         //Remove Previous Cookie Here
-        $.removeCookie('sep-cookie', {
+        $.removeCookie('oct-cookie', {
             expires: 365,
             path: '/',
             domain: 'nbshubhelp.com'
@@ -11,7 +11,7 @@
         $(".header-links #whats-new").click(function() {
             $("img.badger, img.menu-badger").css("display", "none");
             //Add New Cookie Here
-            $.cookie('oct-cookie', true, {
+            $.cookie('nov-cookie', true, {
                 expires: 365,
                 path: '/',
                 domain: 'nbshubhelp.com'
@@ -20,7 +20,7 @@
 
         $(function() {
             //Add New Cookie Here Too
-            if (!$.cookie('oct-cookie')) {
+            if (!$.cookie('nov-cookie')) {
                 $("img.menu-badger").css("display", "block");
                 $("img.badger").css("display", "inline-block");
             }
