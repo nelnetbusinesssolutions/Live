@@ -1,5 +1,11 @@
+/*Removes search bar from login screen */
 .elm-header-user-nav {
 display: none;
+}
+
+/*Removes header links from login screen*/
+.elm-nav.header-links {
+    display: none;
 }
 
 /*I.E. Login Fix*/
