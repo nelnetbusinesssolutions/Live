@@ -60,16 +60,16 @@
         color: #fff;
     }
 
-    .no-touch & .mt-dropdown a {
-        color: @blue-4;
-
-        &:hover {
-            color: @blue-5;
-        }
-    }
-
     a, a:visited {
         color: #fff;
+    }
+
+    .mt-dropdown a {
+        color: @blue-4;
+
+        .no-touch &:hover {
+            color: @blue-5;
+        }
     }
 }
 
@@ -171,6 +171,7 @@ body.elm-user-pro-member.columbia-group-pro-draft li.mt-page-options {
 
         .header-links-detail.hidden-mobile {
             height: 0px;
+            margin-top: 0;
         }
 
         .header-links-detail > ol {
@@ -207,12 +208,15 @@ img.menu.badger {
 
 @media all and (max-width: 80em) {
     img.badger {
-        max-height: 14px;
+        max-height: 16px;
         margin-right: -16px;
     }
+}
 
-    img.menu.badger {
-        max-height: 16px;
+@media all and (max-width: 975px) {
+    img.badger.ie-fixer {
+        max-height: 14px;
+        margin-right: -14px;
     }
 }
 
@@ -923,7 +927,7 @@ img {
     .columbia-article-topic &,
     .columbia-article-howto &,
     .columbia-article-reference &,
-    .columbia-article-video & {
+    .columbia-article-topic-video & {
         border: 1.4px dotted @gray-4;
         border-left: 24px solid @gray-4;
         border-radius: .25em;
@@ -1379,6 +1383,16 @@ dl.expandable-list {
 @media all and (min-width: 65.25em) {
     dl.expandable-list.toc-avoid {
         width: 65%;
+    }
+}
+
+/*Make sure pagination links display in QP dot release article */
+.columbia-article-topic-qpinternadotreleases,
+.columbia-article-topic-qpexternaldotreleases,
+.columbia-article-topic-releasenotes {
+    .mt-article-pagination,
+    .elm-meta-article-navigation {
+        display: block !important;
     }
 }
 
