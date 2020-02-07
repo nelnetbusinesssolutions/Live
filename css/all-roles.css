@@ -18,6 +18,123 @@
 }
 
 /* Homepage Search Area */
+/*Hide the default search bar*/
+.mt-inputredirect {
+    display: none;
+}
+
+form#tz-search {
+    width: 60%;
+    margin: 0 auto;
+
+    select#tz-search-category-selector {
+        height: 3em;
+        background: @pink-3;
+        color: #fff;
+        padding: 0 1.5em 0 .5em;
+        border-radius: .25em 0 0 .25em;
+        border: 0;
+        cursor: pointer;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+
+        option {
+            background: #fff;
+            color: #000;
+        }
+
+        &::-ms-expand {
+            display: none;
+        }
+    }
+
+    div.mt-icon-selector-arrow {
+        display: inline-block;
+        position: relative;
+        width: 25%;
+
+        &:after {
+            content: '\e8dd';
+            color: #fff;
+            position: absolute;
+            right: .5em;
+            top: 1em;
+            pointer-events: none;
+        }
+    }
+
+    input#tz-search-input {
+        width: 75%;
+        height: 3em;
+        padding: 0 .5em;
+        -webkit-appearance: none;
+        border-radius: 0 .25em .25em 0;
+        box-sizing: border-box;
+
+        &[placeholder] {
+            text-overflow: ellipsis;
+        }
+
+        &::-ms-clear, &::-ms-reveal {
+            display: none;
+        }
+
+        &:hover + button#tz-search-submit,
+        &:focus+ button#tz-search-submit {
+            color: @yellow-4;
+        }
+    }
+
+    button#tz-search-submit {
+        position: absolute;
+        height: 3em;
+        background: none;
+        border: 0;
+        color: @blue-4;
+        right: 21%;
+
+        &:hover,
+        &:active,
+        &:focus {
+            border: 0;
+            box-shadow: none;
+            color: @yellow-4;
+        }
+    }
+}
+
+@media all and (max-width: 65.25em) {
+    form#tz-search {
+        width: 70%;
+
+        button#tz-search-submit {
+            right: 16%;
+        }
+    }
+}
+
+@media all and (max-width: 50em) {
+    form#tz-search {
+        width: 90%;
+
+        button#tz-search-submit {
+            right: 8%;
+        }
+    }
+}
+
+@media all and (max-width: 25em) {
+    form#tz-search {
+        div.mt-icon-selector-arrow {
+            width: 35%;
+        }
+
+        input#tz-search-input {
+            width: 65%;
+        }
+    }
+}
+
 .mt-custom-home {
     background: @blue-4;
     border: none;
@@ -607,6 +724,22 @@ div.span-container {
 }
 
 /*****Search*****/
+/*Hide no results text*/
+.type-empty p {
+    visibility: hidden;
+    font-size: 0;
+
+    .columbia-browser-msie11 & {
+        visibility: visible;
+    }
+
+    &:before {
+        content: 'Try a new search.';
+        visibility: visible;
+        font-size: 16px;
+    }
+}
+
 /*Hide Search Bar for initial login*/
 body.columbia-special-firstloginwelcome ol li.elm-global-search {
     visibility: hidden;
@@ -703,6 +836,22 @@ a.mt-f1-success.mt-f1-link.mt-icon-f1-link.mt-f1-search {
 .mt-help-breadcrumb-label {
     font-weight: normal;
     margin-right: .3em;
+}
+
+/*Show more results button*/
+.help-show-more.ui-button {
+    background: @blue-4;
+    color: #fff;
+    border-color: @blue-4;
+
+    .no-touch &:hover,
+    &:active,
+    &:focus {
+        background: #3a6e83;
+        border-color: #3a6e83;
+        color: #fff;
+        box-shadow: none;
+    }
 }
 
 /*****Guide Tabs*****/
@@ -886,10 +1035,21 @@ blockquote {
     h5, h6 {
         color: @pink-3;
     }
+
+    .mt-content-container ol ol {
+        list-style: lower-alpha;
+    }
 }
 
 h6 {
     font-weight: normal;
+}
+
+/*In the editor*/
+.cke_editable {
+    ol ol {
+        list-style: lower-alpha;
+    }
 }
 
 /*Links within Articles*/
@@ -1007,6 +1167,45 @@ dl.mt-listing-detailed dd button.mt-icon-expand-collapse {
 
 dl.mt-listing-detailed dd button.mt-icon-expand-collapse:hover {
     color: @blue-5;
+}
+
+/*Show all/show less text and icon in categories*/
+.mt-guide-tabs-container .mt-reveal-listing-expand-link,
+.mt-reveal-listing-expand-link {
+    width: auto;
+    height: auto;
+    font-size: 1rem;
+
+    &:before {
+        content: '';
+    }
+
+    &:after {
+        margin-left: .5rem;
+        position: relative;
+        top: .1rem;
+        font-size: .8rem;
+
+        body.columbia-browser-firefox & {
+            align-self: center;
+        }
+    }
+
+    &[title="Show all"]:after {
+        content: '\e8e9';
+    }
+
+    &[title="Show less"]:after {
+        content: '\e8ea';
+    }
+
+    .no-touch &:hover,
+    &:active,
+    &:focus {
+        width: auto;
+        height: auto;
+        font-size: 1rem;
+    }
 }
 
 /*Category Icons (marbles)*/
@@ -1274,6 +1473,14 @@ body.elm-user-pro-member .mt-sortable-listing:focus,
         .deki-content-edit & {
             display: block;
         }
+
+        p:first-child {
+            margin-top: 0;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -1364,6 +1571,14 @@ dl.expandable-list {
 
         .deki-content-edit & {
             display: block;
+        }
+
+        p:first-child {
+            margin-top: 0;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
         }
     }
 }

@@ -27,3 +27,8 @@ nav.elm-header-user-nav.elm-nav {
 .mt-classification-filter-container.mt-search-classification-widget {
     display: none;
 }
+
+/*Hide file attachments from search results.*/
+#mt-search-results li.type-file {
+    display: none;
+}

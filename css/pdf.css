@@ -376,12 +376,16 @@ h6 {
 
 /* images */
 img {
-    display: block;
+    display: inline-block;
     margin-top: .75em;
     max-width: 7in;
 }
 
 /* lists */
+ol ol {
+    list-style: lower-alpha;
+}
+
 ol,
 ul,
 dd {
