@@ -13,8 +13,10 @@ fetch('https://www.nbshubhelp.com/@api/deki/users/current?dream.out.format=json'
 .then(json => {
     var userId = json['@id'];
     var userName = json['fullname'];
-    var userGroup = json.groups.group.groupname || json.groups.group[0].groupname;
-    var userGroup2 = Array.isArray(json.groups.group) && json.groups.group.length > 1 ? json.groups.group[1].groupname : undefined;
+    if (json.groups) {
+        var userGroup = json.groups.group.groupname || json.groups.group[0].groupname;
+        var userGroup2 = Array.isArray(json.groups.group) && json.groups.group.length > 1 ? json.groups.group[1].groupname : undefined;
+    }
     smartlook('identify', userId, {
         'name': userName,
         'group': userGroup,
@@ -31,7 +33,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-P83KPRW');</script>
 <!-- End Google Tag Manager -->
-
+<script>
+function createVideoReuseButton(videoLink, videoLinkText) {
+    //If video is being used as content reuse
+    if ($('.mt-contentreuse-widget .mt-video-widget').length) {
+        //Add a button at the top of the article
+        $('#section_1').before('<div><a class="hh-btn video-btn" "mt-self-link" href="' + videoLink + '">' + videoLinkText + '</a><br /></div>');
+    }
+}
+</script>
 <script>
 /*Expandable List: Simple */
 $(function() {

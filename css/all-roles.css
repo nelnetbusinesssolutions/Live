@@ -374,6 +374,41 @@ img.menu.badger {
 
     &.hidden {
         width: 0;
+
+        #expander {
+            display: none;
+        }
+    }
+
+    /* Expand/collapse menu */
+    #expander {
+        height: 110px;
+        padding: 10px 5px;
+        margin-left: -1px;
+        cursor: pointer;
+        background: #c2c2c2;
+        position: absolute;
+        left: 100%;
+        bottom: 50%;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        font-family: Lato, Arial, sans-serif;
+        font-weight: bold;
+        text-align: center;
+        border: 1px solid #fff;
+        border-left: 0;
+
+        .columbia-browser-safari & {
+            margin-left: -11px;
+        }
+    }
+
+    &.user-expanded {
+        width: 50%;
+
+        &.hidden {
+            width: 0;
+        }
     }
 
     /* Close button */
@@ -455,6 +490,7 @@ img.menu.badger {
         display: flex;
         flex-direction: column;
         border-right: 1px solid #fff;
+        width: 100%;
     }
 
     ul {
@@ -612,9 +648,23 @@ div.span-container {
     }
 }
 
+@media all and (max-width: 50em) {
+    #tz-menu.user-expanded {
+        width: 75%;
+    }
+}
+
 @media all and (max-width: 37.5em) {
     #tz-menu {
         width: 100%;
+
+        &.user-expanded {
+            width: 100%;
+        }
+
+        #expander {
+            display: none;
+        }
     }
 
     .elm-skin-container.menu-open {
@@ -749,26 +799,6 @@ body.columbia-special-firstloginwelcome ol li.elm-global-search {
 .mt-field.mt-classification-filter-section {
     display: inline-table;
     float: none;
-}
-
-/* Hide Filters based on Account Type */
-body.elm-user-pro-member .mt-field.mt-classification-filter-section.mt-classification-section-owner,
-body.elm-user-pro-member .mt-field.mt-classification-filter-section.mt-classification-section-stage,
-body.elm-user-pro-member .mt-field.mt-classification-filter-section.mt-classification-section-article {
-    display: none;
-}
-
-body.elm-user-pro-member.columbia-group-pro-admin .mt-field.mt-classification-filter-section.mt-classification-section-owner,
-body.elm-user-pro-member.columbia-group-pro-admin .mt-field.mt-classification-filter-section.mt-classification-section-stage,
-body.elm-user-pro-member.columbia-group-pro-admin .mt-field.mt-classification-filter-section.mt-classification-section-article {
-    display: inline-table;
-}
-
-body.elm-user-community .mt-field.mt-classification-filter-section.mt-classification-section-owner,
-body.elm-user-community .mt-field.mt-classification-filter-section.mt-classification-section-targetaudience,
-body.elm-user-community .mt-field.mt-classification-filter-section.mt-classification-section-stage,
-body.elm-user-community .mt-field.mt-classification-filter-section.mt-classification-section-year {
-    display: none;
 }
 
 /* Hiding Question Mark on Search */
@@ -1053,13 +1083,18 @@ h6 {
 }
 
 /*Links within Articles*/
-article.elm-content-container section.mt-content-container a,
-div.mt-content-container a {
+article.elm-content-container section.mt-content-container a:not(.mt-menu-item):not(.mt-menu-category),
+div.mt-content-container a:not(.mt-menu-item):not(.mt-menu-category) {
     color: @blue-link;
     font-weight: 800;
 
     &:hover {
         color: @blue-4;
+    }
+
+    &.external .mt-icon-newtab,
+    &.link-https .mt-icon-newtab {
+        margin: auto 4px;
     }
 }
 
@@ -1075,6 +1110,12 @@ table {
 /*Image Alignment*/
 img {
     vertical-align:text-bottom;
+}
+
+/*Videos*/
+/*Keep videos confined to 100% of the screen width.*/
+.mt-video-widget iframe {
+    max-width: 100%;
 }
 
 /*Last Updated*/
@@ -1628,6 +1669,10 @@ body.cke_editable .mt-style-conditional hr, .mt-style-conditional hr, .mt-style-
     border: 3px solid #B74E29 !important;
 }
 
+.mt-style-conditional .mt-video-widget iframe {
+    border: 5px solid #B74E29;
+}
+
 /*Learning Path Description Conditional Text*/
 .mt-style-conditional .mt-listing-detailed-overview {
     color: #B74E29;
@@ -1670,6 +1715,12 @@ body.cke_editable .mt-style-conditional hr, .mt-style-conditional hr, .mt-style-
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
+}
+
+.columbia-learning-path {
+    .elm-meta-article-navigation .elm-back-to-top {
+        display: inline-block;
+    }
 }
 
 /*Responsive Mode Back to Top*/
@@ -1859,7 +1910,8 @@ footer.elm-footer nav.elm-footer-siteinfo-nav.elm-nav ol li.elm-footer-powered-b
 
 /*****Admin and Author Tools*****/
 /* Correct live notice link color */
-.elm-live-notice {
+.elm-live-notice,
+.mt-page-health-container.mt-page-health-error {
     a, a:visited, a:active {
         color: @blue-5;
     }
@@ -1867,6 +1919,30 @@ footer.elm-footer nav.elm-footer-siteinfo-nav.elm-nav ol li.elm-footer-powered-b
     .no-touch & a:hover, a:focus {
         color: @blue-6;
     }
+}
+
+/* Correct link color for Site Structure Analysis Report */
+#mt-site-health-table {
+    a, a:visited, a:active {
+        color: @blue-4;
+
+        & span {
+            color: @blue-4;
+        }
+    }
+
+    .no-touch & a:hover, a:focus {
+        color: @blue-5;
+
+        & span {
+            color: @blue-5;
+        }
+    }
+}
+
+/* Correct button font for Search Insights Report */
+.mt-search-insights-filters li.highlight {
+    color: #fff;
 }
 
 /* Add export button to Page Classification Manager */
