@@ -1393,6 +1393,11 @@ body.elm-user-pro-member .mt-sortable-listing:focus,
             color: @green-3;
         }
     }
+
+    /*Display TOC on release notes pages*/
+    .columbia-article-topic-releasenotes & {
+        display: block;
+    }
 }
 /* Removes numbers from before TOC */
 #mt-toc-container li:before {
@@ -1400,6 +1405,13 @@ body.elm-user-pro-member .mt-sortable-listing:focus,
 }
 
 /*****Content Templates*****/
+/*Banners*/
+#aus-banner {
+    a, a:hover {
+        color: #fff !important;
+    }
+}
+
 /* Note, Important, Tip Callouts */
 .note-blank {
     background-image: url(/@api/deki/files/577/Note_Icon_2019.png?origin=mt-web);
