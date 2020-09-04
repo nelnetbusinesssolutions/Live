@@ -46,7 +46,12 @@ function createVideoReuseButton(videoLink, videoLinkText) {
 /*Expandable List: Simple */
 $(function() {
     //Expand/Collapse All Button for Expandable List: Simple*/
-    $('<div class="expand-button"><a class="toggle-all"></a></div>').insertBefore('dl.expand');
+    $('dl.expand').each(function(i, el) {
+        if ($(el).find('dt.expand').length > 1) {
+            $(el).addClass('pluralexpander');
+        }
+    });
+    $('<div class="expand-button"><a class="toggle-all"></a></div>').insertBefore('dl.expand.pluralexpander');
     $('a.toggle-all').text('Expand/Collapse All');
 
     //On click
@@ -137,7 +142,12 @@ $(document).ready(function() {
 
 /* Expandable List Expand/Collapse All Button */
     //Create the button before each list
-    $('<div class="expand-button"><a class="toggle-all"></a></div>').insertBefore('dl.expandable-list');
+    $('dl.expandable-list').each(function(i, el) {
+        if ($(el).find('dt').length > 1) {
+            $(el).addClass('pluralexpander');
+        }
+    });
+    $('<div class="expand-button"><a class="toggle-all"></a></div>').insertBefore('dl.expandable-list.pluralexpander');
     $('a.toggle-all').text('Expand/Collapse All');
 
     //On click
