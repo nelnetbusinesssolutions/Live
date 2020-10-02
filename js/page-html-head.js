@@ -350,6 +350,7 @@ pstArray[5].description = "Select an option, NA, or Multi-product"; //Product
 pstArray[6].description = "Controls URL for authentication"; //Platform
 pstArray[7].description = "Used for release notes; not required for other pages"; //Year
 pstArray[8].description = "Controls Internal Use Only flag"; //Page Access
+pstArray[10].description = "Works with Content Owner and updates content as necessary; receives all feedback"; //Author
 
 //Iterate through labelsArray to add the tooltip
 labelsArray.forEach(function(x, index) {
