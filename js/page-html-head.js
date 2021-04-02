@@ -1,6 +1,6 @@
-<!-- SmartLook -->
+< !--SmartLook -->
 <script type='text/javascript'>
-  window.smartlook||(function(d) {
+        window.smartlook||(function(d) {
     var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
     var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
     c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c);
@@ -8,8 +8,8 @@
     smartlook('init', 'f78fcb0302f7a79b9d471904cb52d113fc5c127a');
 </script>
 <script>
-fetch('https://www.nbshubhelp.com/@api/deki/users/current?dream.out.format=json')
-.then(response => response.json())
+        fetch('https://www.nbshubhelp.com/@api/deki/users/current?dream.out.format=json')
+        .then(response => response.json())
 .then(json => {
     var userId = json['@id'];
     var userName = json['fullname'];
@@ -24,29 +24,29 @@ fetch('https://www.nbshubhelp.com/@api/deki/users/current?dream.out.format=json'
     });
 });
 </script>
-<!-- End SmartLook -->
+<!--End SmartLook-- >
 
-<!-- Google Tag Manager -->
+< !--Google Tag Manager-- >
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-P83KPRW');</script>
-<!-- End Google Tag Manager -->
+<!--End Google Tag Manager-- >
 
 <script src="https://cdn.jsdelivr.net/npm/shepherd.js@5.0.1/dist/js/shepherd.js"></script>
 
 <script>
-function createVideoReuseButton(videoLink, videoLinkText) {
+        function createVideoReuseButton(videoLink, videoLinkText) {
     //If video is being used as content reuse
-    if ($('.mt-contentreuse-widget .mt-video-widget').length) {
+    if ($('.mt-contentreuse-widget .mt-video-widget').length && !$('body.columbia-article-topic-video').length) {
         //Add a button at the top of the article
         $('#section_1').before('<div><a class="hh-btn video-btn" "mt-self-link" href="' + videoLink + '">' + videoLinkText + '</a><br /></div>');
-    }
+    }   
 }
 </script>
 <script>
-/*Expandable List: Simple */
+        /*Expandable List: Simple */
 $(function() {
     //Expand/Collapse All Button for Expandable List: Simple*/
     $('dl.expand').each(function(i, el) {
@@ -78,13 +78,13 @@ $(function() {
             targetDL.children('.expand dt').next('.expand dd').slideUp();
         };
     });
-
+    
     //Add button around text in each dt. Add aria attributes to button and dd.
     $('.expand dt').each(function(index) {
         $(this).wrapInner( '<button aria-controls="item-' + (index + 1) + '" aria-expanded="false"><span></span></button>' );
         $(this).next('.expand dd').attr('id', 'item-' + (index + 1));
     });
-
+    
     //Add/remove open class on click
     $('.expand dt').click(function(e) {
         e.preventDefault();
@@ -98,13 +98,13 @@ $(function() {
             $(this).next('.expand dd').slideUp();
         };
     });
-
+    
 });
 </script>
 <script>
-/* Expandable List Functionality */
+        /* Expandable List Functionality */
 
-//Wrap the text of each dt in a button and assign aria values
+        //Wrap the text of each dt in a button and assign aria values
 $(document).ready(function() {
     $('.expandable-list dt').each(function(index) {
         $(this).wrapInner( '<button aria-controls="item-' + (index + 1) + '" aria-expanded="false"><span></span></button>' );
@@ -178,7 +178,7 @@ $(document).ready(function() {
 </script>
 
 <script>
-$(document).ready(function () {
+        $(document).ready(function () {
 $('.mt-feedback-consent-checkbox').closest('.mt-field').remove();
 $('.elm-pdf-export a').attr('title','Printer friendly page');
 $('body.columbia-article-topic-qpinternadotreleases .mt-article-pagination, body.columbia-article-topic-qpexternaldotreleases .mt-article-pagination, body.columbia-article-topic-releasenotes .mt-article-pagination').show();
@@ -189,7 +189,7 @@ $('body.columbia-article-topic-qpinternadotreleases .mt-article-pagination, body
 
 
 <script>
-$(document).ready(function () {
+        $(document).ready(function () {
     //Styling sign in page
         if ($('.columbia-special-userlogin').length) {
             $('.columbia-special-userlogin .mt-login-skin-template').insertBefore('#SpecialUserlogin');
@@ -281,7 +281,7 @@ $(document).on('click', 'aside#mt-toc-container button.mt-toggle', function () {
 
 </script>
 <script>
-/*** Creating tooltips for each page settings classification ***/
+                /*** Creating tooltips for each page settings classification ***/
 
 window.addEventListener('DOMContentLoaded', function() {
 if (document.querySelector('#mt-summary')) {
@@ -405,14 +405,14 @@ tooltipMaker(document.querySelector('#live-tag-input-area label'), document.quer
 });
 </script>
 <script>
-/* Checklist Functionality to Retain Checks */
+                /* Checklist Functionality to Retain Checks */
 window.addEventListener('DOMContentLoaded', function() {
     //Selects all checkboxes and puts them in an array
     const boxes = document.querySelectorAll('#todo-list input'),
           boxesArray = Array.prototype.slice.call(boxes),
           //Get the pathname of the URL
           pathname = window.location.pathname;
-
+    
     //Put any stored data into the variable checks
     if (localStorage[pathname]) {
         let checks = JSON.parse(localStorage.getItem(pathname));
@@ -424,7 +424,7 @@ window.addEventListener('DOMContentLoaded', function() {
             boxes[key].setAttribute('checked', val);
         });
     };
-
+    
     //Empty object to collect data
     let boxStatus = {};
     //Iterate through boxesArray
@@ -446,7 +446,7 @@ window.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem(pathname, JSON.stringify(boxStatus));
         });
     });
-
+    
     let resetButton = document.querySelectorAll('.reset-checklist'),
         resetButtonArray = Array.prototype.slice.call(resetButton);
     //Add listener to reset button
