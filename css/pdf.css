@@ -554,7 +554,8 @@ dd {
 .mt-style-conditional .note-blank, 
 .mt-style-conditional .important,
 .mt-style-conditional .tip,
-.mt-style-conditional .premier-note {
+.mt-style-conditional .premier-note,
+.mt-style-conditional .note-troubleshooting {
     border: 1px solid #B74E29!important;
     color: #b74e29;
     p {color: #B74E29;}
@@ -585,6 +586,10 @@ dd {
     background-image: url(/@api/deki/files/16672/50PremierArrows.png);
 }
 
+.note-troubleshooting {
+    background-image: url(/@api/deki/files/20154/troubleshooting_icon.png);
+}
+
 .important {
     overflow: hidden;
     padding: 20px 20px 20px 80px;
@@ -598,7 +603,7 @@ dd {
     min-height: 30px;
 }
 
-.note-blank, .tip, .premier-note {
+.note-blank, .tip, .premier-note, .note-troubleshooting {
     overflow: hidden;
     padding: 20px 20px 20px 80px;
     border-radius: 6px;
@@ -614,8 +619,13 @@ dd {
     border: 1px solid #8A8C8E;
 }
 
-.note-blank, .premier-note {
+.note-blank, .premier-note, .note-troubleshooting {
     border: 1px solid #89af65; 
+}
+
+/*h5p content*/
+.lp-knowledge-check {
+    display: none;
 }
 
 ul.checkbox-list li:before
