@@ -453,6 +453,9 @@ img.menu.badger {
 
             & > .link-span a {
                 color: #000;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 115%;
             }
         }
 
