@@ -1048,7 +1048,8 @@ a.mt-f1-success.mt-f1-link.mt-icon-f1-link.mt-f1-search {
 }
 
 /* Update glyph code for article icon */
-.mt-icon-article-topic-video:before {
+.mt-icon-article-topic-video:before,
+.mt-icon-article-video:before {
     content: '\e8b0';
 }
 
@@ -1092,6 +1093,16 @@ blockquote {
 
     .mt-content-container ol ol {
         list-style: lower-alpha;
+    }
+}
+
+.mt-content-container {
+    table,
+    .expandable-list dd,
+    .expand dd {
+        ol, ul {
+            margin: 0;
+        }
     }
 }
 
@@ -1410,20 +1421,11 @@ body.elm-user-pro-member .mt-sortable-listing:focus,
 /*****TOC*****/
 #elm-main-content aside#mt-toc-container {
     border: 2px solid @green-3;
-    background: @green-3;
+    background: #fff;
 
     button,
     .no-touch & button:hover {
-        color: #fff;
-    }
-
-    &.hh-collapsed {
-        background: #fff;
-
-        button,
-        .no-touch & button:hover {
-            color: @green-3;
-        }
+        color: @green-3;
     }
 
     /*Display TOC on release notes pages*/
@@ -1485,6 +1487,10 @@ body.elm-user-pro-member .mt-sortable-listing:focus,
     background-position: 20px 20px !important;
     background-size: 35px;
     min-height: 30px;
+
+    p, ul, ol {
+        margin: 0
+    }
 }
 
 /* HubHelp Button Template */
