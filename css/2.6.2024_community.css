@@ -1,0 +1,60 @@
+.elm-meta-bottom {
+     display: none;
+}
+
+/* Hide Classification option and attachments from search results */
+.mt-search-filters-option-classifications,
+.mt-search-filters-option-attachments {
+    display: none;
+}
+
+/* Show Classification option for NBS Viewer in search results */
+.columbia-group-nbs-viewer .mt-search-filters-option-classifications {
+    display: block;
+}
+
+/* Hides all classifications except Page Access Flag & target audience from search page - only affects NBS Viewer */
+.mt-search-filters-classification-article,
+.mt-search-filters-classification-market,
+.mt-search-filters-classification-owner,
+.mt-search-filters-classification-stage,
+.mt-search-filters-classification-product,
+.mt-search-filters-classification-platform,
+.mt-search-filters-classification-year,
+.mt-search-filters-classification-admin,
+.mt-search-filters-classification-contentauthor,
+.mt-search-filters-classification-content-reuse,
+.mt-search-filters-classification-featured {
+    display: none;
+}
+
+@media screen and (min-width: 50em) {
+    .mt-classification-filter .mt-field {
+        width: 33.33%;}
+}
+
+/*hides the cog icon for user preferences*/
+/*a.mt-icon-user-preferences {
+    Display: none !important;
+}*/
+
+/*Displays Blue Nav Bar*/
+nav .elm-header-user-nav .elm-nav {
+    display: block;
+}
+
+/* COMMENTED OUT - NOT NEEDED I THINK 8.9.23 */
+/* .mt-classification-filter-container .mt-search-classification-widget {
+    display: none;
+} */
+
+/* Disable hover effect and hand icon, make user menu unclickable, hide MT default options from header 
+.mt-icon-user-menu.mt-dropdown-link {
+    pointer-events: none;
+}
+.mt-user-menu-preferences {
+    display: none !important;
+}
+.mt-user-menu-signout {
+    display: none !important;
+}*/
